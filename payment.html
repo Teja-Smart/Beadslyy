@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Payment</title>
+  <!-- Include CSS files as needed -->
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Include Paytm Checkout JS (staging environment) -->
+  <script type="application/javascript" src="https://securegw-stage.paytm.in/merchantpgpui/checkoutjs/merchants/YOUR_MID_HERE.js"></script>
+</head>
+<body>
+  <h1>Payment Page</h1>
+  <!-- You can optionally display order summary/details here -->
+  <button id="paytm-btn">Proceed to Pay</button>
+  
+  <script type="application/javascript">
+    document.getElementById('paytm-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // For demo purposes, using dummy order data.
+      // In a real scenario, you'll obtain these details from your backend.
+      var orderData = {
+        orderId: "ORDERID_12345",         // Dynamically generated order ID
+        token: "YOUR_TXN_TOKEN_HERE",       // Transaction token from your backend
+        tokenType: "TXN_TOKEN",
+        amount: "100.00"                   // Transaction amount in INR (as a string)
+      };
+
+      // Paytm Checkout configuration object
+      var config = {
+        "root": "",
+        "flow": "DEFAULT",
+        "data": {
+          "orderId": orderData.orderId,
+          "token": orderData.token,
+          "tokenType": orderData.tokenType,
+          "amount": orderData.amount
+        },
+        "handler": {
+          "notifyMerchant": function(eventName, data) {
+            console.log("Merchant notified:", eventName, data);
+          }
+        }
+      };
+
+      window.Paytm.CheckoutJS.init(config).then(function onSuccess() {
+        window.Paytm.CheckoutJS.invoke();
+      }).catch(function onError(error) {
+        console.error("Error initializing Paytm Checkout:", error);
+      });
+    });
+  </script>
+</body>
+</html>
