@@ -516,6 +516,12 @@
    </section>
    <!-- end arrival section -->
 
+   <!-- Floating Cart Icon -->
+   <a href="cart.html" class="floating-cart">
+      🛒
+      <span class="cart-badge" id="cart-badge">0</span>
+  </a>
+
    <!-- product section -->
    <section class="product_section layout_padding">
       <div class="container">
@@ -529,9 +535,12 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Men's Shirt
-                        </a>
+                        <button class="add-to-cart" 
+                              data-name="Men's Shirt 0"
+                              data-price="75"
+                              data-image="images/p1.png">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=1" class="option2">
                            Buy Now
                         </a>
@@ -542,7 +551,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Men's Shirt
+                        Men's Shirt 0
                      </h5>
                      <h6>
                         $75
@@ -554,9 +563,12 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button class="add-to-cart" 
+                              data-name="Men's Shirt 1"
+                              data-price="80"
+                              data-image="images/p2.png">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=2" class="option2">
                            Buy Now
                         </a>
@@ -567,7 +579,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Men's Shirt
+                        Men's Shirt 1
                      </h5>
                      <h6>
                         $80
@@ -579,9 +591,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Women\'s Dress 0', 68, 'images/p3.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=3" class="option2">
                            Buy Now
                         </a>
@@ -592,7 +604,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Women's Dress
+                        Women's Dress 0
                      </h5>
                      <h6>
                         $68
@@ -604,9 +616,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Women\'s Dress 1', 70, 'images/p4.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=4" class="option2">
                            Buy Now
                         </a>
@@ -617,7 +629,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Women's Dress
+                        Women's Dress 1
                      </h5>
                      <h6>
                         $70
@@ -629,9 +641,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Women\'s Dress 2', 75, 'images/p5.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=5" class="option2">
                            Buy Now
                         </a>
@@ -642,7 +654,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Women's Dress
+                        Women's Dress 2
                      </h5>
                      <h6>
                         $75
@@ -654,9 +666,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Women\'s Dress 3', 58, 'images/p6.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=6" class="option2">
                            Buy Now
                         </a>
@@ -667,7 +679,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Women's Dress
+                        Women's Dress 3
                      </h5>
                      <h6>
                         $58
@@ -679,9 +691,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Women\'s Dress 4', 80, 'images/p7.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=7" class="option2">
                            Buy Now
                         </a>
@@ -692,7 +704,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Women's Dress
+                        Women's Dress 4
                      </h5>
                      <h6>
                         $80
@@ -704,9 +716,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Men\'s Shirt 2', 65, 'images/p8.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=8" class="option2">
                            Buy Now
                         </a>
@@ -717,7 +729,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Men's Shirt
+                        Men's Shirt 2
                      </h5>
                      <h6>
                         $65
@@ -729,9 +741,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Men\'s Shirt 3', 65, 'images/p9.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=9" class="option2">
                            Buy Now
                         </a>
@@ -742,7 +754,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Men's Shirt
+                        Men's Shirt 3
                      </h5>
                      <h6>
                         $65
@@ -754,9 +766,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Men\'s Shirt 4', 65, 'images/p10.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=10" class="option2">
                            Buy Now
                         </a>
@@ -767,7 +779,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Men's Shirt
+                        Men's Shirt 4
                      </h5>
                      <h6>
                         $65
@@ -779,9 +791,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Men\'s Shirt 5', 65, 'images/p11.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=11" class="option2">
                            Buy Now
                         </a>
@@ -792,7 +804,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Men's Shirt
+                        Men's Shirt 5
                      </h5>
                      <h6>
                         $65
@@ -804,9 +816,9 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="" class="option1">
-                           Add To Cart
-                        </a>
+                        <button onclick="addToCart('Women\'s Dress 5', 65, 'images/p12.png')">
+                           Add to Cart
+                        </button>
                         <a href="productInfo.html?id=12" class="option2">
                            Buy Now
                         </a>
@@ -817,7 +829,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Women's Dress
+                        Women's Dress 5
                      </h5>
                      <h6>
                         $65
@@ -1044,27 +1056,8 @@
    <!-- custom js -->
    <script src="js/custom.js"></script>
    <!-- to Add to cart -->
-
-   <script>
-      function addToCart(name, price, image) {
-         const cart = JSON.parse(localStorage.getItem('cart')) || [];
-         const existingItem = cart.find(item => item.name === name);
-
-         if (existingItem) {
-            existingItem.quantity++;
-         } else {
-            cart.push({
-               name: name,
-               price: price,
-               image: image,
-               quantity: 1
-            });
-         }
-
-         localStorage.setItem('cart', JSON.stringify(cart));
-         alert('Item added to cart!');
-      }
-   </script>
+   <!-- main script file -->
+   <script src="js/main.js"></script>
 
 </body>
 

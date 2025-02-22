@@ -9,26 +9,41 @@
     <!-- Link All CSS Files -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleProductInfo.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body id="product-info-page">
 
     <div class="product-detail">
-        <img id="productImage" src="" alt="Product">
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <div class="gallery-container">
+                <!-- Images will be dynamically added here -->
+            </div>
+            <!-- Navigation Arrows -->
+            <button class="gallery-arrow left-arrow"><i class="fa fa-chevron-left"></i></button>
+            <button class="gallery-arrow right-arrow"><i class="fa fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Product Name -->
         <h2 id="productName"></h2>
+
+        <!-- Product Price -->
         <p id="productPrice"></p>
+
+        <!-- Product Description -->
         <p id="productDescription"></p>
     </div>
 
+    <!-- Button Container -->
     <div class="button-container">
-        <a href="index.html" class="back-btn">Back to Home</a>
-        <a href=" " class="pay-btn">Pay Now</a>
+        <a href="index.html" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Home</a>
+        <a href="" class="pay-btn"><i class="fa fa-credit-card"></i> Pay Now</a>
     </div>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/ProductInfo.js"></script>
 </body>
 
 </html>
