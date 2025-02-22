@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+        }
+        .quantity-controls button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        #total-price {
+            font-size: 1.5em;
+            color: green;
+            margin: 20px 0;
+        }
+        #checkout-btn {
+            padding: 15px 30px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items-container"></div>
+    <div id="total-price">Total: $0.00</div>
+    <button id="checkout-btn">Proceed to Checkout</button>
+
+    <script>
+        // Load cart from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function updateCartDisplay() {
+            const container = document.getElementById('cart-items-container');
+            const totalElement = document.getElementById('total-price');
+            let total = 0;
+            
+            container.innerHTML = '';
+            
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div>
+                        <h3>${item.name}</h3>
+                        <p>Price: $${item.price.toFixed(2)}</p>
+                        <div class="quantity-controls">
+                            <button onclick="changeQuantity(${index}, -1)">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="changeQuantity(${index}, 1)">+</button>
+                            <button onclick="removeItem(${index})">🗑️ Remove</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(itemDiv);
+            });
+
+            totalElement.textContent = `Total: $${total.toFixed(2)}`;
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function changeQuantity(index, delta) {
+            cart[index].quantity += delta;
+            if (cart[index].quantity < 1) cart.splice(index, 1);
+            updateCartDisplay();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+        }
+
+        // Initial cart display
+        updateCartDisplay();
+
+        // Checkout button handler
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            alert('Redirecting to checkout...');
+            // Add actual checkout logic here
+        });
+    </script>
+</body>
+</html>
