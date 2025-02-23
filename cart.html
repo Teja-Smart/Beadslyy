@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="css/cart.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-    <h1>Your Shopping Cart</h1>
-    <div id="cart-items-container"></div>
-    <div id="total-price">Total: $0.00</div>
-    <button id="checkout-btn">Proceed to Checkout</button>
+<body id="cart-page">
+    <div class="cart-container">
+        <h1>Your Shopping Cart</h1>
+        <div id="cart-items-container"></div>
+        <div class="cart-total">
+            <span id="total-price" class="total-price">Total: $0.00</span>
+        </div>
+        <div class="cart-actions">
+            <a href="index.html" class="continue-btn">Continue Shopping</a>
+            <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
 
     <script src="js/cart.js"></script>
 </body>
