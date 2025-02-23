@@ -1,14 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('Cart page loaded'); // Debug 1
+
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    console.log('Initial cart data:', cart); // Debug 2
     const cartItemsContainer = document.getElementById('cart-items-container');
     const totalPriceElement = document.getElementById('total-price');
 
+    console.log('Container elements:', {cartItemsContainer, totalPriceElement}); // Debug 3
+
     function updateCartDisplay() {
+
+        console.log('Updating cart display...'); // Debug 4
         cartItemsContainer.innerHTML = '';
         let total = 0;
 
         cart.forEach((item, index) => {
+            console.log('Processing item:', item); // Debug 5
             total += item.price * item.quantity;
+            
+            if(!item.price || !item.name) {
+                console.warn('Invalid item at index', index, item);
+                return;
+            }
             
             const cartItem = document.createElement('div');
             cartItem.className = 'cart-item';

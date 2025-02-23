@@ -953,3 +953,41 @@ a:focus {
   60% { transform: scale(1.1); }
   100% { transform: scale(1); opacity: 1; }
 }
+
+/*  Add to cart button style  */
+/* Add to Cart Button Styling */
+.add-to-cart {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 30px;
+  width: 165px;
+  text-align: center;
+  transition: all 0.3s;
+  margin: 5px 0;
+  
+  /* Match option1 styles */
+  background-color: #cf44f7 !important;
+  border: 1px solid #cf44f7 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  
+  /* Button-specific reset */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: normal;
+}
+
+.add-to-cart:hover {
+  background-color: transparent !important;
+  color: #cf44f7 !important;
+  text-decoration: none !important;
+}
+
+/* If using Bootstrap */
+.add-to-cart.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
