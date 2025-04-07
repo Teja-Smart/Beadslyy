@@ -1,0 +1,109 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.tracker-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.tracker-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#transactionId {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#checkStatusBtn {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#checkStatusBtn:hover {
+    background-color: #2980b9;
+}
+
+.result-container {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    min-height: 100px;
+}
+
+.order-status {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.status-processing {
+    color: #f39c12;
+}
+
+.status-shipped {
+    color: #27ae60;
+}
+
+.status-cancelled {
+    color: #e74c3c;
+}
+
+.order-details {
+    margin-top: 10px;
+}
+
+.order-details p {
+    margin: 5px 0;
+    color: #7f8c8d;
+}
+
+/* Auto-check animation */
+.auto-checking {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .auto-checking::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: translateY(-50%) rotate(360deg); }
+  }
